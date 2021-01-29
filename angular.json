@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "AngularDjango"
+  "defaultProject": "AngularDjango",
+  "cli": {
+    "analytics": false
+  }
 }
