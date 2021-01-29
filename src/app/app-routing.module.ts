@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AdminComponent } from './components/admin/admin/admin.component';
 import { LoginComponent } from './components/login/login.component';
+import { AddTaskComponent } from './components/tasks/add-task/add-task.component';
 import { TasksComponent } from './components/tasks/tasks/tasks.component';
 import { TeacherComponent } from './components/teacher/teacher/teacher.component';
 import { RoleGuardService } from './service/auth/role/role-guard.service';
@@ -13,6 +14,7 @@ const routes: Routes = [
   {
     path: 'task-list', component: TasksComponent, canActivate: [RoleGuardService], data: { expectedRole: 'admin'}
   },
+  {path: 'task-create', component: AddTaskComponent, canActivate: [RoleGuardService], data: { expectedRole: 'admin'}}
 ];
 
 @NgModule({

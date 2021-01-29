@@ -1,1 +1,14 @@
-<p>add-task works!</p>
+<div class="list-users shadow bg-light mt-5">
+    <form action="" class="px-5 mb-4 col-md-6" [formGroup] = "form" (ngSubmit) = "onSubmit()">
+        
+        <div class="form-group">
+            <label for="libelle">Title</label>
+            <input type="text" class="form-control" [formControl]="form.controls['title']" id="title" placeholder="title">
+        </div>
+       
+        <div class="mt-4 button-form">
+            <button type="submit" class="btn btn-primary float-right submit mb-4">Enregistrer</button>
+        </div>
+        
+    </form>
+</div>

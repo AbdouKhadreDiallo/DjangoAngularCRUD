@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { LoginService } from '../login.service';
 
 @Injectable({
@@ -18,4 +19,7 @@ export class TaskService {
   getAll(){
     return this.http.get(`${this.baseUrl}/task-list/`, this.httpOptions);
   }
+  add(data): Observable<any> {
+		return this.http.post<any>(`${this.baseUrl}/task-create/`, data, this.httpOptions);
+	}
 }
