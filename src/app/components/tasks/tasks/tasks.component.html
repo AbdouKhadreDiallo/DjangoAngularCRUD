@@ -1,0 +1,16 @@
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Completed</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of tasks" >
+            <td> {{item.id}} </td>
+            <td> {{item.title}} </td>
+            <td> {{item.completed}} </td>
+        </tr>
+    </tbody>
+</table>

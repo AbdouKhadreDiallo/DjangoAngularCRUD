@@ -11,13 +11,17 @@ import { AdminComponent } from './components/admin/admin/admin.component';
 import { RoleGuardService } from './service/auth/role/role-guard.service';
 import { JwtHelperService, JWT_OPTIONS } from '@auth0/angular-jwt';
 import { TeacherComponent } from './components/teacher/teacher/teacher.component';
+import { TasksComponent } from './components/tasks/tasks/tasks.component';
+import { AddTaskComponent } from './components/tasks/add-task/add-task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     AdminComponent,
-    TeacherComponent
+    TeacherComponent,
+    TasksComponent,
+    AddTaskComponent
   ],
   imports: [
     BrowserModule,
